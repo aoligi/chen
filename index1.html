@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+.div2{
+	margin:0 auto;
+	width:500px;
+	
+	}
+.div1{
+	border-bottom:2px solid 
+	rgba(0,0,0,1);
+	position:relative;
+	}
+ul{list-style:none;margin-left:-40px;margin-top:-1px;}
+li{
+	width:500px;
+	height:50px;
+	line-height:50px;
+	position:relative;
+	border-bottom:rgba(204,204,204,1) solid 1px;
+	}
+li input{
+	position:absolute;
+	left:200px;
+	top:15px;
+	padding:4px 0px;
+	}
+li span{
+	margin-left:40px;
+	}
+.li_last{
+	height:200px;
+	line-height:200px;
+	}
+li textarea{
+	position:absolute;
+	left:170px;
+	top:15px;
+	}
+.anniu{
+	
+	width:100px;
+	height:40px;
+	margin-left:215px;
+	}
+li input,textarea{
+	background:#fff url(image/attention.png) no-repeat 98% center;
+	border:1px solid #aaa;
+	box-shadow:0px 0px 3px #ccc;
+	border-radius:2px;
+	transition:padding 1.25s;
+	}
+li input:focus,textarea:focus{
+	background:#fff;
+	border:1px solid #555;
+	box-shadow:0 0 3px #aaa;
+	padding-right:70px;
+	}
+li input:focus:invalid,textarea:focus:invalid{
+	background:#fff url(image/warn.png) no-repeat 98% center;
+	box-shadow:0 0 5px #d45252;
+	border-color:#b03535;
+	}
+li input:required:valid,textarea:required:valid{
+	background:url(image/right.png) no-repeat 98% center;
+	box-shadow:0 0 3px #5cd053;
+	border-color:#28921f;
+	}
+</style>
+</head>
+
+<body>
+<div class="div2">
+<form>
+<div class="div1"><h2>联系我们</h2></div>
+<ul>
+<li>
+<span>姓名</span>
+<input type="text" name="name" required>
+</li>
+
+<li>
+<span>邮箱</span>
+<input type="email" name="email" required>
+</li>
+
+<li>
+<span>网站</span>
+<input type="url" name="url" required>
+</li>
+
+<li class="li_last">
+<span>网站</span>
+<textarea rows="10" cols="40" placeholder="请输入你的信息" required></textarea>
+</li>
+</ul>
+<div class="div1"><input class="anniu" type="submit" value="提交"></div>
+</form>
+</div>
+</body>
+</html>
